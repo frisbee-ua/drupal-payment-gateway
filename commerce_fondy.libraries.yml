@@ -1,0 +1,14 @@
+fondy:
+  version: 2
+  js:
+    "//pay.fondy.eu/latest/checkout-vue/checkout.js": { minified: true }
+
+form:
+  version: 2
+  js:
+    commerce_fondy.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - commerce_fondy/fondy

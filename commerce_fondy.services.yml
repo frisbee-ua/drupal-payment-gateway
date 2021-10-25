@@ -1,0 +1,27 @@
+services:
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Builder\RequestBuilder:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Builder\RequestBuilder
+    arguments: [
+      '@Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Service\FondyService',
+      '@Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Configuration\ConfigurationService']
+
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Builder\ResponseBuilder:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Builder\ResponseBuilder
+
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Service\FondyService:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Service\FondyService
+
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Configuration\ConfigurationService:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Configuration\ConfigurationService
+
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Entity\PaymentType:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Entity\PaymentType
+
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Order\OrderManager:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Order\OrderManager
+
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Entity\Order\Status:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Entity\Order\Status
+
+  Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Handler\CallbackHandler:
+    class: Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Handler\CallbackHandler

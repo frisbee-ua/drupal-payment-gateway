@@ -1,0 +1,40 @@
+processing:
+  category: commerce_fondy_order
+  label: 'Order processing'
+  template: '<p>Order processing.</p>'
+approved:
+  category: commerce_fondy_order
+  label: 'Order approved'
+  template: '<p>Order approved.</p>'
+completed_message:
+  category: commerce_fondy_order
+  label: 'Order approved'
+  template: '<p>Order approved. Message: {{ message }}</p>'
+canceled:
+  category: commerce_fondy_order
+  label: 'Order canceled'
+  template: '<p>Order canceled.</p>'
+voided_message:
+  category: commerce_fondy_order
+  label: 'Order canceled'
+  template: '<p>Order canceled. Message: {{ message }}</p>'
+refunded:
+  category: commerce_fondy_order
+  label: 'Order refunded'
+  template: '<p>Order refunded.</p>'
+refunded_message:
+  category: commerce_fondy_order
+  label: 'Order refunded'
+  template: '<p>Order refunded. Message: {{ message }}</p>'
+refunded_partial:
+  category: commerce_fondy_order
+  label: 'Order partially refunded'
+  template: '<p>Order partially refunded.</p>'
+partially_refunded_message:
+  category: commerce_fondy_order
+  label: 'Order partially refunded'
+  template: '<p>Order partially refunded. Message: {{ message }}</p>'
+error:
+  category: commerce_fondy_order
+  label: 'Order not completed'
+  template: '<p>Order not completed. Error message: {{ message }}</p>'

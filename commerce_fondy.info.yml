@@ -1,0 +1,12 @@
+name: Commerce Fondy
+type: module
+description: 'Provides a Fondy payment method for Drupal Commerce.'
+package: Commerce (contrib)
+core: 8.x
+dependencies:
+  - commerce:commerce
+  - commerce:commerce_order
+  - commerce:commerce_checkout
+  - commerce:commerce_payment
+'interface translation project': commerce_fondy
+'interface translation server pattern': modules/fondy/translations/%project-%language.po

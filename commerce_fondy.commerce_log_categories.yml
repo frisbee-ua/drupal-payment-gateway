@@ -1,0 +1,3 @@
+commerce_fondy_order:
+  label: Fulfillment
+  entity_type: commerce_order

@@ -1,0 +1,42 @@
+Fondy:
+  id: Fondy
+  group: commerce_order
+  label: 'Fondy'
+  states:
+    draft:
+      label: 'Draft'
+    processing:
+      label: 'Processing'
+    approved:
+      label: 'Approved'
+    canceled:
+      label: 'Canceled'
+    refunded:
+      label: 'Fully Refunded'
+    refunded_partial:
+      label: 'Refunded Partially'
+  transitions:
+    place:
+      label: 'Process order'
+      from: [draft]
+      to: processing
+    processing:
+      label: 'Process order'
+      from: [draft]
+      to: processing
+    approved:
+      label: 'Approve order'
+      from: [processing]
+      to: approved
+    canceled:
+      label: 'Cancel order'
+      from: [processing, draft]
+      to: canceled
+    refunded:
+      label: 'Fully refund order'
+      from: [approved]
+      to: refunded
+    refunded_partial:
+      label: 'Partially refund order'
+      from: [approved]
+      to: refunded_partial

@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+msgid "Merchant ID"
+msgstr "Merchant ID"
+
+msgid "Private API key"
+msgstr "Private API key"
+
+msgid "Cards"
+msgstr "Cards"
+
+msgid "Enable Cards Payments"
+msgstr "Enable Cards Payments"
+
+msgid "Cards Payment Title"
+msgstr "Cards Payment Title"
+
+msgid "Bank Links"
+msgstr "Bank Links"
+
+msgid "Enable Bank Links Payments"
+msgstr "Enable Bank Links Payments"
+
+msgid "Bank Links Payment Title"
+msgstr "Bank Links Payment Title"
+
+msgid "Wallets"
+msgstr "Wallets"
+
+msgid "Enable Wallets Payments"
+msgstr "Enable Wallets Payments"
+
+msgid "Wallets Payment Title"
+msgstr "Wallets Payment Title"
+
+msgid "Enable Fondy"
+msgstr "Enable Fondy"
+
+msgid "Redirect"
+msgstr "Redirect"
+
+msgid "Embedded"
+msgstr "Embedded"
+
+msgid "Order status after payment"
+msgstr "Order status after payment"
+
+msgid "Order status if canceled"
+msgstr "Order status if canceled"
+
+msgid "Order status while in progress"
+msgstr "Order status while in progress"
+
+msgid "Payment method title"
+msgstr "Payment method title"

@@ -1,0 +1,9 @@
+{
+    "name": "drupal/commerce_fondy",
+    "type": "drupal-module",
+    "description": "Provides a Fondy payment method for Drupal Commerce.",
+    "homepage": "https://fondy.eu",
+    "require": {
+        "drupal/commerce": "^2.14"
+    }
+}
