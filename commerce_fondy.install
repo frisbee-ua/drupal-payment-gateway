@@ -1,2 +1,47 @@
 <?php
 
+use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Entity\Order\Status;
+use Drupal\commerce_payment\Entity\PaymentGateway;
+use Drupal\commerce_payment\Entity\PaymentMethod;
+use Drupal\commerce_order\Entity\OrderType;
+
+function commerce_fondy_install()
+{
+    $paymentGateway = PaymentGateway::create([
+        'id' => 'fondy',
+        'label' => 'Commerce Fondy Payment Gateway',
+        'weight' => 0,
+        'plugin' => 'fondy',
+        'mode' => 'live',
+        'configuration' => [
+            'display_label' => 'Fondy',
+            'cards_payment_method' => [
+                'cards_payment_status' => true,
+            ],
+            'payment_method_title' => 'Fondy Payments',
+            'order_status_pending' => Status::ORDER_STATUS_APPROVED,
+            'order_status_if_canceled' => Status::ORDER_STATUS_CANCELED,
+            'order_status_in_progress' => Status::ORDER_STATUS_PROCESSING,
+        ],
+    ]);
+    $paymentGateway->save();
+
+    $order_type = OrderType::create([
+        'status' => true,
+        'id' => 'fondy',
+        'label' => 'Fondy order type',
+        'workflow' => 'Fondy',
+        'refresh_mode' => 'always',
+        'refresh_frequency' => 30,
+    ]);
+    $order_type->save();
+
+    $payment_method = PaymentMethod::create([
+        'type' => 'fondy',
+        'payment_gateway' => 'fondy',
+        'payment_gateway_mode' => 'live',
+        'remote_id' => 'fondy',
+        'is_default' => true,
+    ]);
+    $payment_method->save();
+}

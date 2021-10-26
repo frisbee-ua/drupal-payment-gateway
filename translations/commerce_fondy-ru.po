@@ -7,55 +7,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
 msgid "Merchant ID"
-msgstr "Merchant ID"
+msgstr "Идентификатор мерчанта"
 
 msgid "Private API key"
-msgstr "Private API key"
+msgstr "Секретный ключ мерчанта"
 
-msgid "Cards"
-msgstr "Cards"
+msgid "Credit Cards"
+msgstr "Кредитные карты"
 
-msgid "Enable Cards Payments"
-msgstr "Enable Cards Payments"
+msgid "Enable Credit Cards Payments"
+msgstr "Включить способ оплаты кредитными картами"
 
-msgid "Cards Payment Title"
-msgstr "Cards Payment Title"
+msgid "Credit Cards Payment Title"
+msgstr "Название спороба оплаты кредитными картами"
 
 msgid "Bank Links"
-msgstr "Bank Links"
+msgstr "Банковские платежи"
 
 msgid "Enable Bank Links Payments"
-msgstr "Enable Bank Links Payments"
+msgstr "Включить способ оплаты через банковские ссылки"
 
 msgid "Bank Links Payment Title"
-msgstr "Bank Links Payment Title"
+msgstr "Название спороба оплаты через банковские ссылки"
 
-msgid "Wallets"
-msgstr "Wallets"
+msgid "Google/Apple Pay"
+msgstr "Google/Apple Pay"
 
-msgid "Enable Wallets Payments"
-msgstr "Enable Wallets Payments"
+msgid "Enable Google/Apple Pay Payments"
+msgstr "Включить способ оплаты через Google/Apple Pay"
 
-msgid "Wallets Payment Title"
-msgstr "Wallets Payment Title"
+msgid "Google/Apple Pay Payment Title"
+msgstr "Название способа оплаты через Google/Apple Pay"
 
 msgid "Enable Fondy"
-msgstr "Enable Fondy"
+msgstr "Включить метод оплаты Fondy"
 
 msgid "Redirect"
-msgstr "Redirect"
+msgstr "Редирект на сайт Fondy"
 
 msgid "Embedded"
-msgstr "Embedded"
+msgstr "Форма Fondy на странице оплаты"
 
 msgid "Order status after payment"
-msgstr "Order status after payment"
+msgstr "Статус заказа после оплаты"
 
 msgid "Order status if canceled"
-msgstr "Order status if canceled"
+msgstr "Статус отмененного заказа"
 
 msgid "Order status while in progress"
-msgstr "Order status while in progress"
+msgstr "Статус заказа в процессе"
 
 msgid "Payment method title"
-msgstr "Payment method title"
+msgstr "Название метода оплаты"

@@ -60,7 +60,6 @@ final class RequestBuilder extends Container
         return new static(
             $container->get(FondyService::class),
             $container->get(ConfigurationService::class)
-            //$container->get('entity.manager')
         );
     }
 

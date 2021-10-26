@@ -7,55 +7,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
 msgid "Merchant ID"
-msgstr "Merchant ID"
+msgstr "Ідентифікатор мерчанта"
 
 msgid "Private API key"
-msgstr "Private API key"
+msgstr "Секретний ключ мерчанта"
 
-msgid "Cards"
-msgstr "Cards"
+msgid "Credit Cards"
+msgstr "Кредитні карти"
 
-msgid "Enable Cards Payments"
-msgstr "Enable Cards Payments"
+msgid "Enable Credit Cards Payments"
+msgstr "Включити спосіб оплати кредитними картами"
 
-msgid "Cards Payment Title"
-msgstr "Cards Payment Title"
+msgid "Credit Cards Payment Title"
+msgstr "Назва спору оплаты кредитними картами"
 
 msgid "Bank Links"
-msgstr "Bank Links"
+msgstr "Банківські платежі"
 
 msgid "Enable Bank Links Payments"
-msgstr "Enable Bank Links Payments"
+msgstr "Включити спосіб оплати через банківські ссилки"
 
 msgid "Bank Links Payment Title"
-msgstr "Bank Links Payment Title"
+msgstr "Назва спору оплаты через банківські ссилки"
 
-msgid "Wallets"
-msgstr "Wallets"
+msgid "Google/Apple Pay"
+msgstr "Google/Apple Pay"
 
-msgid "Enable Wallets Payments"
-msgstr "Enable Wallets Payments"
+msgid "Enable Google/Apple Pay Payments"
+msgstr "Включити спосіб оплати через Google/Apple Pay"
 
-msgid "Wallets Payment Title"
-msgstr "Wallets Payment Title"
+msgid "Google/Apple Pay Payment Title"
+msgstr "Назви способів оплати через Google/Apple Pay"
 
 msgid "Enable Fondy"
-msgstr "Enable Fondy"
+msgstr "Включити метод оплаты Fondy"
 
 msgid "Redirect"
-msgstr "Redirect"
+msgstr "Редирект на сайт Fondy"
 
 msgid "Embedded"
-msgstr "Embedded"
+msgstr "Форма фонду на сторінці оплаты"
 
 msgid "Order status after payment"
-msgstr "Order status after payment"
+msgstr "Статус замовлення після оплати"
 
 msgid "Order status if canceled"
-msgstr "Order status if canceled"
+msgstr "Статус відмінених замовлень"
 
 msgid "Order status while in progress"
-msgstr "Order status while in progress"
+msgstr "Статус зазначений у процесі"
 
 msgid "Payment method title"
-msgstr "Payment method title"
+msgstr "Назва методу оплаты"

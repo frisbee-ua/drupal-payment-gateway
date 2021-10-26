@@ -2,13 +2,11 @@
 
 namespace Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway;
 
-use DateTime;
 use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Builder\RequestBuilder;
 use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Configuration\ConfigurationService;
 use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Entity\Order\Status as OrderStatusEntity;
 use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Entity\PaymentType as PaymentTypeEntity;
 use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Order\OrderManager;
-use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Service\FondyService;
 use Drupal\commerce_order\Entity\OrderInterface;
 use Drupal\commerce_payment\Entity\PaymentInterface;
 use Drupal\commerce_payment\Entity\PaymentMethod;
@@ -28,7 +26,6 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Utility\Token;
-use http\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -167,16 +164,16 @@ class Fondy extends OffsitePaymentGatewayBase implements FondyInterface
         ];
         $form['cards_payment_method'] = [
             '#type' => 'fieldset',
-            '#title' => $this->t('Cards'),
+            '#title' => $this->t('Credit Cards'),
         ];
         $form['cards_payment_method']['cards_payment_status'] = [
             '#type' => 'checkbox',
-            '#title' => $this->t('Enable Cards Payments'),
+            '#title' => $this->t('Enable Credit Cards Payments'),
             '#default_value' => $this->configuration['cards_payment_method']['cards_payment_status'],
         ];
         $form['cards_payment_method']['cards_payment_title'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Cards Payment Title'),
+            '#title' => $this->t('Credit Cards Payment Title'),
             '#default_value' => $this->configuration['cards_payment_method']['cards_payment_title'],
         ];
 
@@ -211,16 +208,16 @@ class Fondy extends OffsitePaymentGatewayBase implements FondyInterface
 
         $form['wallets_payment_method'] = [
             '#type' => 'fieldset',
-            '#title' => $this->t('Wallets'),
+            '#title' => $this->t('Google/Apple Pay'),
         ];
         $form['wallets_payment_method']['wallets_payment_status'] = [
             '#type' => 'checkbox',
-            '#title' => $this->t('Enable Wallets Payments'),
+            '#title' => $this->t('Enable Google/Apple Pay Payments'),
             '#default_value' => $this->configuration['wallets_payment_method']['wallets_payment_status'],
         ];
         $form['wallets_payment_method']['wallets_payment_title'] = [
             '#type' => 'textfield',
-            '#title' => $this->t('Wallets Payment Title'),
+            '#title' => $this->t('Google/Apple Pay Payment Title'),
             '#default_value' => $this->configuration['wallets_payment_method']['wallets_payment_title'],
         ];
 
@@ -304,7 +301,7 @@ class Fondy extends OffsitePaymentGatewayBase implements FondyInterface
      */
     public function createPayment(PaymentInterface $payment, $capture = true)
     {
-        return;
+        return $payment;
     }
 
     /**
@@ -312,7 +309,7 @@ class Fondy extends OffsitePaymentGatewayBase implements FondyInterface
      */
     public function capturePayment(PaymentInterface $payment, Price $amount = null)
     {
-        return;
+        return $payment;
     }
 
     /**
@@ -320,7 +317,7 @@ class Fondy extends OffsitePaymentGatewayBase implements FondyInterface
      */
     public function voidPayment(PaymentInterface $payment)
     {
-        return;
+        return $payment;
     }
 
     /**
@@ -389,7 +386,7 @@ class Fondy extends OffsitePaymentGatewayBase implements FondyInterface
      */
     public function createPaymentMethod(PaymentMethodInterface $payment_method, $payment_details)
     {
-        return;
+        return $payment_method;
     }
 
     /**

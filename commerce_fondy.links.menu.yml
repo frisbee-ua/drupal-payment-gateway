@@ -1,5 +1,5 @@
 commerce_fondy.form:
   route_name: commerce_fondy.form
-  title: 'Custom Payment Gateway'
-  description: 'URL and Mode Settings for the Custom module.'
+  title: 'Fondy Payment Gateway'
+  description: 'URL and Mode Settings for the Fondy module.'
   parent: system.admin_config_system

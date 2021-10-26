@@ -67,7 +67,7 @@ class RedirectCheckoutForm extends PaymentOffsiteForm
     public function buildConfigurationForm(array $form, FormStateInterface $form_state)
     {
         $form = parent::buildConfigurationForm($form, $form_state);
-        
+
         /** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
         $payment = $this->entity;
 
@@ -151,7 +151,7 @@ class RedirectCheckoutForm extends PaymentOffsiteForm
         }
 
         $order = Order::load($orderId);
-        $order->setPlacedTime(\Drupal::time()->getCurrentTime());
+        $order->setPlacedTime(Drupal::time()->getCurrentTime());
         $this->orderManager->setOrderStatusProcessing($order);
         $order->save();
 

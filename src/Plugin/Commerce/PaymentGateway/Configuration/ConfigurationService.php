@@ -26,7 +26,7 @@ final class ConfigurationService
     {
         $this->paymentType = new PaymentType();
         $this->paymentGateway = PaymentGateway::load('fondy');
-        $this->configuration = $this->paymentGateway->getPluginConfiguration();
+        $this->configuration = $this->getPluginConfiguration();
     }
 
     /**
@@ -36,6 +36,18 @@ final class ConfigurationService
     public function setConfiguration(array $configuration)
     {
         $this->configuration = $configuration;
+    }
+
+    /**
+     * @return array|false
+     */
+    public function getPluginConfiguration()
+    {
+        if ($this->paymentGateway) {
+            return $this->paymentGateway->getPluginConfiguration();
+        }
+
+        return false;
     }
 
     /**
