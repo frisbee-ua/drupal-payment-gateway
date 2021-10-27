@@ -3,6 +3,7 @@ type: module
 description: 'Provides a Fondy payment method for Drupal Commerce.'
 package: Commerce (contrib)
 core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
   - commerce:commerce
   - commerce:commerce_order
