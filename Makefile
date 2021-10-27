@@ -1,4 +1,4 @@
-ARCHIVE_NAME = fondy-payment-gateway-drupal-8.tar.gz
+ARCHIVE_NAME = fondy-payment-gateway-drupal.tar.gz
 ARCHIVE_DIRECTORY = fondy-payment-gateway
 
 build:

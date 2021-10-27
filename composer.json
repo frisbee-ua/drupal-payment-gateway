@@ -1,5 +1,5 @@
 {
-    "name": "drupal/commerce_fondy",
+    "name": "frisbee-ua/drupal-payment-gateway",
     "type": "drupal-module",
     "description": "Provides a Fondy payment method for Drupal Commerce.",
     "homepage": "https://fondy.eu",

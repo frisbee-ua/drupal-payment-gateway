@@ -9,7 +9,7 @@ function commerce_fondy_install()
 {
     $paymentGateway = PaymentGateway::create([
         'id' => 'fondy',
-        'label' => 'Fondy Payment Gateway',
+        'label' => 'Commerce Fondy Payment Gateway',
         'weight' => 0,
         'plugin' => 'fondy',
         'mode' => 'live',

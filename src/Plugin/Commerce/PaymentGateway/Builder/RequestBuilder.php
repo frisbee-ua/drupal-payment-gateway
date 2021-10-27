@@ -129,7 +129,7 @@ final class RequestBuilder extends Container
         $this->fondyService->setRequestParameterAmount($this->getOrderAmount($order));
         $this->fondyService->setRequestParameterCurrency($this->getOrderCurrency($order));
         $this->fondyService->setRequestParameterServerCallbackUrl($this->getCallbackUrl());
-        $this->fondyService->setRequestParameterResponseUrl($this->getSuccessPageUrl());
+        $this->fondyService->setRequestParameterResponseUrl($this->getSuccessPageUrl($order));
         $this->fondyService->setRequestParameterLanguage($this->getLanguageCode($order));
         $this->fondyService->setRequestParameterSenderEmail($order->getEmail());
         $this->fondyService->setRequestParameterReservationData($this->generateReservationData($order));
@@ -435,9 +435,12 @@ final class RequestBuilder extends Container
     /**
      * @return \Drupal\Core\GeneratedUrl|string
      */
-    private function getSuccessPageUrl()
+    private function getSuccessPageUrl(Order $order)
     {
-        return Url::fromRoute('commerce_fondy.finish', [], ['absolute' => TRUE])->toString();
+        return Url::fromRoute('commerce_payment.checkout.return', [
+            'commerce_order' => $order->id(),
+            'step' => 'payment',
+        ], ['absolute' => TRUE])->toString();
     }
 
     /**

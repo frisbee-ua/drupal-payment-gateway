@@ -5,12 +5,6 @@ commerce_fondy.form:
     _form: '\Drupal\commerce_fondy\Form\BasicSettingsForm'
   requirements:
     _permission: 'access commerce administration pages'
-commerce_fondy.finish:
-  path: '/payment/finish'
-  defaults:
-    _controller: '\Drupal\commerce_fondy\Controller\ResultController::onFinish'
-  requirements:
-    _access: 'TRUE'
 commerce_fondy.notify:
   path: '/payment/notify'
   defaults:

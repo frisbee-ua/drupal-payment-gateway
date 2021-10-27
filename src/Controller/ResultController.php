@@ -4,13 +4,14 @@ namespace Drupal\commerce_fondy\Controller;
 
 use Drupal\commerce_fondy\Plugin\Commerce\PaymentGateway\Handler\CallbackHandler;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Routing\RouteMatchInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal;
 
 /**
  * Endpoints for the routes defined.
  */
-class ResultController extends ControllerBase
+class ResultController extends Drupal\commerce_payment\Controller\PaymentCheckoutController
 {
     /**
      * @var \Drupal\Core\DependencyInjection\Container
@@ -30,21 +31,11 @@ class ResultController extends ControllerBase
 
     /**
      * @param \Symfony\Component\HttpFoundation\Request $request
-     * @return void
-     */
-    public function onFinish(Request $request)
-    {
-        return;
-    }
-
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
      * @return array
      * @throws \Exception
      */
     public function onNotify(Request $request)
     {
-
         $response = $this->callbackHandler->execute();
 
         return [
