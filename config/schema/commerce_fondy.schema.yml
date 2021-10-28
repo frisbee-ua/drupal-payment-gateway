@@ -18,10 +18,10 @@ commerce_fondy.commerce_payment_gateway.plugin.fondy:
     title:
       type: string
       label: 'Payment method title'
-    bank_links_payment_method.cards_payment_status:
+    bank_links_payment_method.bank_links_payment_status:
       type: string
       label: 'Status'
-    bank_links_payment_method.cards_payment_title:
+    bank_links_payment_method.bank_links_payment_title:
       type: string
       label: 'Title'
       default: no

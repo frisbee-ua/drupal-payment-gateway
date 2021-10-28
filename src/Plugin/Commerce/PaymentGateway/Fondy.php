@@ -182,15 +182,15 @@ class Fondy extends OffsitePaymentGatewayBase implements FondyInterface
             '#type' => 'fieldset',
             '#title' => $this->t('Bank Links'),
         ];
-        $form['bank_links_payment_method']['bank_links_payment_method_status'] = [
+        $form['bank_links_payment_method']['bank_links_payment_status'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Enable Bank Links Payments'),
-            '#default_value' => $this->configuration['bank_links_payment_method']['bank_links_payment_method_status'],
+            '#default_value' => $this->configuration['bank_links_payment_method']['bank_links_payment_status'],
         ];
-        $form['bank_links_payment_method']['bank_links_payment_method_title'] = [
+        $form['bank_links_payment_method']['bank_links_payment_title'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Bank Links Payment Title'),
-            '#default_value' => $this->configuration['bank_links_payment_method']['bank_links_payment_method_title'],
+            '#default_value' => $this->configuration['bank_links_payment_method']['bank_links_payment_title'],
         ];
         $form['bank_links_payment_method']['bank_links_default_country'] = [
             '#type' => 'address_country',
